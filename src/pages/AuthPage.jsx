@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Store, User, ShoppingBag, ArrowRight } from 'lucide-react';
+import {
+  Store,
+  ShoppingBag,
+  ShoppingBasket,
+  ArrowRight
+} from 'lucide-react';
 
 export default function AuthPage() {
   const navigate = useNavigate();
@@ -30,8 +35,8 @@ export default function AuthPage() {
         }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '40px' }}>
-              <div style={{ background: 'white', padding: '12px', borderRadius: '12px' }}>
-                <ShoppingBag size={24} color="var(--accent-primary)" />
+              <div className="brand-logo">
+                    <ShoppingBag size={24} strokeWidth={2.2} />
               </div>
               <h1 style={{ fontSize: '1.8rem', fontWeight: 700 }}>NexusMall</h1>
             </div>
@@ -62,8 +67,8 @@ export default function AuthPage() {
                     cursor: 'pointer', textAlign: 'left', width: '100%'
                   }}
                 >
-                  <div style={{ background: 'var(--accent-glow)', padding: '16px', borderRadius: '50%' }}>
-                    <User size={28} color="var(--accent-primary)" />
+                  <div className="buyer-icon">
+                    <ShoppingBasket size={28} strokeWidth={2.2} />
                   </div>
                   <div>
                     <h3 style={{ fontSize: '1.2rem', marginBottom: '4px' }}>I'm a Buyer</h3>
@@ -80,8 +85,8 @@ export default function AuthPage() {
                     cursor: 'pointer', textAlign: 'left', width: '100%'
                   }}
                 >
-                  <div style={{ background: 'var(--accent-purple-glow)', padding: '16px', borderRadius: '50%' }}>
-                    <Store size={28} color="var(--accent-purple)" />
+                  <div className="vendor-icon">
+                    <Store size={28} strokeWidth={2.2} />
                   </div>
                   <div>
                     <h3 style={{ fontSize: '1.2rem', marginBottom: '4px' }}>I'm a Vendor</h3>
